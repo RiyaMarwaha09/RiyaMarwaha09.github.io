@@ -2,7 +2,7 @@
 
 - 🎓 MBA in Business Analytics @ UMass Dartmouth (Charlton College of Business)  
 - 📊 Passionate about turning raw data into insights that drive smarter business decisions  
-- 🛠️ Skilled in **SQL, R, Python, Power BI, Tableau, Excel, Predictive Modeling, VBA, Power Pivot**  
+- 🛠️ Skilled in **SQL, R, Python, Power BI, Tableau, Excel, Predictive Modeling, Power Pivot**  
 - 🔍 Exploring how **data + behavioral science** can improve decision-making in business and finance
 - 💼 Currently building my portfolio and learning advanced technical skills for analytics interviews 
 
@@ -22,5 +22,5 @@
 ---
 
 📬 Let’s connect!  
-• [LinkedIn](https://www.linkedin.com/in/riya-marwaha-9a56a928a) 
+• [LinkedIn](https://www.linkedin.com/in/riyamarwaha/) 
 • [Email](mailto:riyamarwaha92@gmail.com)
