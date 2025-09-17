@@ -1,0 +1,18 @@
+<!-- assets/strokes/stroke-soft.svg -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="4 4 1000 180" preserveAspectRatio="none">
+  <!-- change fill to match your palette -->
+  <path fill="#E7C3A6"
+        d="M35 95
+           C70 65, 120 70, 170 85
+           C260 110, 350 80, 450 88
+           C560 97, 660 78, 760 86
+           C840 92, 910 70, 965 80
+           Q980 83, 985 95
+           Q990 110, 975 118
+           C910 150, 820 135, 750 130
+           C640 121, 550 138, 455 130
+           C345 121, 250 140, 165 128
+           C115 121, 70 128, 45 118
+           Q25 110, 30 100
+           Q33 96, 35 95 Z"/>
+</svg>
