@@ -3,7 +3,8 @@
 - 🎓 MBA in Business Analytics @ UMass Dartmouth (Charlton College of Business)  
 - 📊 Passionate about turning raw data into insights that drive smarter business decisions  
 - 🛠️ Skilled in **SQL, R, Python, Power BI, Tableau, Excel, Predictive Modeling, VBA, Power Pivot**  
-- 🔍 Exploring how **data + behavioral science** can improve decision-making in business and finance - 💼 Currently building my portfolio and learning advanced technical skills for analytics interviews 
+- 🔍 Exploring how **data + behavioral science** can improve decision-making in business and finance
+- 💼 Currently building my portfolio and learning advanced technical skills for analytics interviews 
 
 
 ---
