@@ -24,5 +24,5 @@
 📬 Let’s connect!  
 • [LinkedIn](https://www.linkedin.com/in/riyamarwaha/) 
 • [Email](mailto:riyamarwaha92@gmail.com)
-• [Portfolio]:[riyamarwaha09.github.io](https://riyamarwaha09.github.io)
+• [Portfolio]:(https://riyamarwaha09.github.io)
 
