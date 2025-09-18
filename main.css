@@ -284,15 +284,27 @@ img{ max-width:100%; height:auto; display:block }
   footer{ margin-top:1.25rem }
 }
 
-/* === Force Experience & Education sections to stack vertically === */
+/* === Stack Work Experience and Education full-width === */
 #experience,
-#education {
-  width: 100% !important;      /* take full width */
-  grid-column: 1 / -1 !important;  /* if inside grid, span all columns */
+#education{
+  /* works if parent is grid */
+  grid-column: 1 / -1 !important;
+
+  /* works if parent is flex */
+  flex: 0 0 100% !important;
+  max-width: 100% !important;
+
+  /* safety for old float layouts */
+  float: none !important;
+  clear: both !important;
+
+  width: 100% !important;
+  display: block !important;
 }
 
-.row, .two-col, .columns {
-  display: block !important;   /* break the 2-column layout */
-  grid-template-columns: none !important;
+/* If their parent is the two-column wrapper, collapse it to one column */
+.row, .two-col, .columns, .resume-grid, .grid-2{
+  grid-template-columns: 1fr !important;   /* for grid parents */
+  display: block !important;               /* for flex parents */
 }
 
