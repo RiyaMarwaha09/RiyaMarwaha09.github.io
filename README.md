@@ -9,7 +9,7 @@
 
 ---
 
-## ✨ A little more about me  
+## ✨ About me  
 
 - 🔎 I specialize in **business analytics, business intelligence, predictive modeling, and data visualization**  
 - 📂 Projects include:  
