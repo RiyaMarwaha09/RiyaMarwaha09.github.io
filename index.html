@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="main.css" />
+</head>
+<body>
+  <!-- Header / Nav -->
+  <header class="site-header" id="top">
+    <nav class="nav container">
+      <a class="brand" href="#hero">Riya's Portfolio</a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero container" id="hero">
+    <div class="hero__copy">
+      
+    <h1 class="hero__title reveal">Analytics with Purpose.<br/> Strategy with Impact
+    </h1>
+      <p class="hero__subtitle reveal">
+        Hi There! I’m <b>Riya Marwaha</b> — an MBA in Business Analytics who built <b>fraud models on 61K+ transactions</b> (uncovering fraud vs. genuine patterns), <b>retail dashboards</b> that flagged price mismatch as the top return driver, and <b>marketing dashboards</b> showing Instagram as the strongest ROI platform. Beyond projects, I’ve led as <b>GA, Tutor, and Orientation Leader</b>, and now aim to grow as a <b>Business Analyst turning complex data into decisions for growth</b>.
+</p>
+ 
+      </p>
+      <div class="hero__cta reveal">
+        <a class="btn" href="#projects">View Projects</a>
+        <a class="btn btn--ghost" href="Riya_Marwaha_Resume.pdf" target="_blank" rel="noopener">Resume</a>
+      </div>
+      <!--<ul class="hero__badges reveal">
+        <li>Power BI & Tableau</li>
+        <li>SQL & Python</li>
+        <li>Excel & VBA</li>
+        <li>NLP & R for Behavior Insights</li>
+      </ul>-->
+    </div>
+    <div class="hero__art reveal">
+        <img src="images/riya-profile.jpg" alt="Riya Marwaha" class="hero__img" />
+        <p class="hero__caption">Business ANALYST<br />
+        </p>
+         <!-- Social icons -->
+          <div class="social-links">
+            <a href="https://www.linkedin.com/in/riya-marwaha/" target="_blank" aria-label="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/RiyaMarwaha09" target="_blank" aria-label="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="mailto:riyamarwaha92@gmail.com" aria-label="Email">
+                <i class="fas fa-envelope"></i>
+            </a>
+        </div>
+
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="about container section" id="about">
+    <div class="section__head">
+      <h2 class="section__title reveal">About Me</h2>
+    </div>
+    <div class="about__grid">
+        <img src="images/riya-about.jpg" alt="Riya working on her laptop" class="about__img reveal" />
+      
+      <div class="about__copy reveal">
+        <p>
+          My journey into business analytics began with one question: how can data drive smarter decisions? Over the past few years, I’ve explored this through projects- building fraud detection models on 61K+ transactions to separate genuine from fraudulent activity, designing retail dashboards that revealed price mismatch as the top driver of returns, and developing marketing dashboards that showed where ad spend truly pays off. Each project wasn’t just about models and metrics, but about uncovering patterns businesses could act on immediately.
+        </p>
+        <p>
+          What drives me is the impact behind the numbers — knowing that the insights I create help reduce risks, cut inefficiencies, and guide smarter strategies. Beyond projects, I’ve led as a Graduate Assistant, Tutor, and Orientation Leader — roles that taught me how analysis and leadership can go hand in hand. My motivation is simple: I want to be the Business Analyst who not only interprets data, but transforms it into decisions that make organizations more confident, efficient, and ready for growth.
+        </p>
+        <a class="btn btn--pill" href="#contact">Let’s connect</a>
+      </div>
+      
+    </div>
+  </section>
+
+  <!-------------------------------------------------------------------------------- Projects ----------------------------------------------------------------------------------------------------------------------->
+<!-- PROJECTS -->
+<section class="section container" id="projects">
+  <div class="section__head">
+    <h2 class="section__title">Featured Projects</h2>
+  </div>
+
+  <div class="proj-grid">
+
+    <!-- 1.Fashion Retail Returns Analytics  -->
+    <article class="proj-card">
+      <a class="proj-thumb" href="https://github.com/RiyaMarwaha09/Fashion-Retail-Returns-Analytics" target="_blank" rel="noopener">
+        <img src="images/retail-returns-thumb.png" alt="Fashion Retail Returns Analytics: Tableau & R" />
+        <span class="proj-open" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M14 3h7v7M21 3l-8 8"/><path d="M5 11v10h10"/></svg>
+        </span>
+      
+      <div class="proj-overlay">
+        <p class="proj-desc">
+         Processed 2,176 boutique records using SQL, R, and Tableau to uncover why customers returned products. Logistic regression revealed price mismatch as the strongest predictor of returns, while Tableau dashboards showed certain categories like apparel faced higher return risks with negative margins. These insights highlighted opportunities to reduce return-related costs by ~15% and improve inventory optimization.
+        </p>
+        <ul class="proj-tags">
+          <li>R</li><li>SQL</li><li>Tableau</li><li>Excel</li><li>K-Means</li><li>PCA</li><li>Model Evaluation</li>
+        </ul>
+      </div>
+      </a>
+    </article>
+
+    <!-- 2. Marketing Performance Analysis -->
+    <article class="proj-card">
+      <a class="proj-thumb" href="https://github.com//RiyaMarwaha09/Marketing_Performance_Analysis" target="_blank" rel="noopener">
+        <img src="images/marketing-dashboard-thumb.png" alt="Marketing Performance Analysis (Tableau)" />
+        <span class="proj-open" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M14 3h7v7M21 3l-8 8"/><path d="M5 11v10h10"/></svg>
+        </span>
+      
+      <div class="proj-overlay">
+        <p class="proj-desc">
+          Designed a Tableau dashboard to track KPI metrics (ROI, CTR, revenue, satisfaction) across marketing channels and regions. Findings showed email & social media outperform TV/news, driving recommendations for ROI optimization, smarter budget allocation, and region-specific campaign strategies.
+        </p>
+        <ul class="proj-tags">
+          <li>Tableau</li><li>Tableauprep Builder</li><li>Marketing Analytics</li>
+        </ul>
+      </div>
+      </a>
+    </article>
+
+    <!-- 3. Fraud Transactions Detection ML -->
+    <article class="proj-card">
+      <a class="proj-thumb" href="https://github.com/RiyaMarwaha09/Fraud-Detection-ML" target="_blank" rel="noopener">
+        <img src="images/fraud-project.png" alt="Fraud Transactions Detection ML" />
+        <span class="proj-open" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M14 3h7v7M21 3l-8 8"/><path d="M5 11v10h10"/></svg>
+        </span>
+      <div class="proj-overlay">
+        <p class="proj-desc">
+         Applied predictive modeling (Logistic Regression, Random Forest, XGBoost) on 61K+ transactions in R to classify fraud vs. genuine activity. Using ROSE sampling for imbalance correction, I delivered risk mitigation insights that improved fraud detection accuracy, supporting data-driven decision-making in financial compliance.
+        </p>
+        <ul class="proj-tags">
+          <li>R</li><li>ROSE Sampling</li><li>Regression Modelling</li><li>Random Forest</li><li>XGBoost</li>
+        </ul>
+      </div>
+       </a>
+    </article>
+
+    <!-- 4. KARA Child Abuse -->
+    <article class="proj-card">
+      <a class="proj-thumb" href="https://github.com/purva-kekan/child-abuse-undereporting" target="_blank" rel="noopener">
+        <img src="images/ap4.jpeg" alt="KARA child abuse" />
+        <span class="proj-open" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M14 3h7v7M21 3l-8 8"/><path d="M5 11v10h10"/></svg>
+        </span>
+     
+      <div class="proj-overlay">
+        <p class="proj-desc">
+          Built visuals for "Americas children in 100 charts" book and improved national child welfare reporting by 40%, enabling 35% stronger policy advocacy through integrated data systems
+        </p>
+        <ul class="proj-tags">
+          <li>Power BI</li><li>Python</li><li>Excel</li>
+        </ul>
+      </div>
+       </a>
+    </article>
+
+
+
+<!------------------------------------------------------------------ Skills ----------------------------------------------------------------------------------->
+
+<section class="skills container section" id="skills">
+  <div class="section__head">
+    <h2 class="section__title">Skills</h2>
+  </div>
+
+  <!-- toolbar -->
+  <div class="graph-toolbar">
+    <div class="graph-legend">
+      <span class="legend-dot legend-core legend-box"></span> Core
+      <span class="legend-dot legend-tech legend-box"></span> Technical
+      <span class="legend-dot legend-non legend-box"></span> Non-Technical
+    </div>
+    <div class="graph-actions">
+      <button class="btn btn--pill is-active" data-filter="all">All</button>
+      <button class="btn btn--pill" data-filter="technical">Technical</button>
+      <button class="btn btn--pill" data-filter="nontech">Non-Technical</button>
+      <!--<button class="btn btn--pill" data-filter="fit">Fit</button>-->
+    </div>
+  </div>
+
+  <!-- graph canvas -->
+  <div id="skillsGraph" class="skills-graph" role="img"
+       aria-label="Network graph of technical tools and non-technical methods."></div>
+
+  <p class="graph-note">Tip: drag to explore • scroll to zoom • click nodes to focus</p>
+</section>
+
+
+<!-------------------------------------------------------------- Work Experience ---------------------------------------------------------->
+<section class="experience container section" id="experience">
+  <div class="section__head">
+    <h2 class="section__title reveal">Work Experience</h2>
+  </div>
+
+  <ol class="timeline">
+  <!-- Graduate Assistant -->
+  <li class="tl-item reveal">
+    <div class="tl-dot"></div>
+    <article class="xp-card">
+      <header class="xp-head">
+        <h3> Graduate Assistant <span>@ Charlton College of Business, UMass Dartmouth</span></h3>
+        <span class="xp-meta">Jan 2025 – May 2025</span>
+      </header>
+      <ul class="xp-bullets">
+        <li>Assisted the Chairperson with research and academic projects using Excel and ML.</li>
+        <li>Conducted data-driven analysis to support decision-making and course preparation.</li>
+        <li>Mentored students and supported grading, strengthening research and analytics skills.</li>
+      </ul>
+      <ul class="chip-list">
+        <li>Excel</li>•<li>R</li>•<li>Machine Learning</li>•<li>Research</li>•<li>Student Mentorship</li>
+      </ul>
+    </article>
+  </li>
+
+  <!-- Office Assistant -->
+  <li class="tl-item reveal">
+    <div class="tl-dot"></div>
+    <article class="xp-card">
+      <header class="xp-head">
+        <h3> Office Assistant <span>@ Office of Student Accessibility Services, UMass Dartmouth</span></h3>
+        <span class="xp-meta">Feb 2025 – May 2025</span>
+      </header>
+      <ul class="xp-bullets">
+        <li>Managed scheduling and exam accommodations for 20+ students, improving efficiency.</li>
+        <li>Proctored exams while ensuring academic integrity and attention to detail.</li>
+      </ul>
+      <ul class="chip-list">
+        <li>Scheduling</li>•<li>Student Support</li>•<li>Academic Services</li>
+      </ul>
+    </article>
+  </li>
+
+  <!-- Business Center Tutor -->
+  <li class="tl-item reveal">
+    <div class="tl-dot"></div>
+    <article class="xp-card">
+      <header class="xp-head">
+        <h3> Business Center Tutor <span>@ Academic Resource Center, UMass Dartmouth</span></h3>
+        <span class="xp-meta">Sep 2024 – May 2025</span>
+      </header>
+      <ul class="xp-bullets">
+        <li>Tutored 25+ undergrads in Finance, Excel, and SQL, raising pass rates by 15%.</li>
+        <li>Supported coursework with financial modeling, SQL queries, and Excel tools.</li>
+      </ul>
+      <ul class="chip-list">
+        <li>Finance</li>•<li>SQL</li>•<li>Excel</li>•<li>Mentorship</li>
+      </ul>
+    </article>
+  </li>
+
+  <!-- Study Abroad Fair Assistant -->
+  <li class="tl-item reveal">
+    <div class="tl-dot"></div>
+    <article class="xp-card">
+      <header class="xp-head">
+        <h3> Study Abroad Fair Assistant <span>@ International Programs Office, UMass Dartmouth</span></h3>
+        <span class="xp-meta">Jan 2025</span>
+      </header>
+      <ul class="xp-bullets">
+        <li>Assisted 30+ students with fair registration and guided them to team members.</li>
+        <li>Distributed 200+ bookmarks and supported desk setup for a smooth event flow.</li>
+      </ul>
+      <ul class="chip-list">
+        <li>Event Management</li>•<li>Student Engagement</li>•<li>Communication</li>
+      </ul>
+    </article>
+  </li>
+
+  <!-- Orientation Leader -->
+  <li class="tl-item reveal">
+    <div class="tl-dot"></div>
+    <article class="xp-card">
+      <header class="xp-head">
+        <h3> Orientation Leader <span>@ International Student & Scholar Center, UMass Dartmouth</span></h3>
+        <span class="xp-meta">Aug 2024 – Aug 2025</span>
+      </header>
+      <ul class="xp-bullets">
+        <li>Facilitated icebreakers and campus tours for 100+ international students.</li>
+        <li>Led a team of 10, ensuring smooth onboarding and stronger student connections.</li>
+      </ul>
+      <ul class="chip-list">
+        <li>Leadership</li>•<li>Event Facilitation</li>•<li>Student Support</li>
+      </ul>
+    </article>
+  </li>
+
+  <!-- Accounting Data Analyst Intern -->
+  <li class="tl-item reveal">
+    <div class="tl-dot"></div>
+    <article class="xp-card">
+      <header class="xp-head">
+        <h3> Accounting Data Analyst Intern <span>@ K.R. Company, Delhi</span></h3>
+        <span class="xp-meta">May 2023 – Dec 2023</span>
+      </header>
+      <ul class="xp-bullets">
+        <li>Analyzed $1M+ transactions using SQL, Excel & Tableau, improving reporting accuracy by 20%.</li>
+        <li>Performed financial statement analysis (P&L, balance sheet, cash flow) for better forecasting.</li>
+        <li>Reduced reporting errors by 15% through data validation and compliance checks.</li>
+      </ul>
+      <ul class="chip-list">
+        <li>SQL</li>•<li>Excel</li>•<li>Tableau</li>•<li>Financial Analysis</li>
+      </ul>
+    </article>
+  </li>
+  </ol>
+</section>
+
+<!-------------------------------------------------------------- Education ------------------------------------------------------------------>
+<section class="education container section" id="education">
+  <div class="section__head">
+    <h2 class="#education section__title reveal">Education</h2>
+  </div>
+
+  <ol class="timeline">
+    <!-- MASTERS -->
+    <li class="tl-item reveal">
+      <div class="tl-dot"></div>
+  <div class="edu-grid">
+    <article class="edu-card reveal">
+      <header class="edu-head">
+        <h3>MBA in Business Analytics - <i> GPA: 3.8/4.0</i></h3>
+         
+        <span class="edu-meta"><b>December 2025</b></span>
+      </header>
+      <span class="edu-notes">UMass Dartmouth - Dartmouth, MA</span>
+      <br/>
+      <ul class="chip-list">
+        <i>Coursework:</i> <li>Business Intelligence</li>•<li>Predictive Analytics</li>•<li>Big Data</li>•<li>Data Visualization</li>•<li>Data Mining</li>•<li>Machine Learning and SQL</li>•<li>Probability and Statistics</li>
+      </ul>
+      
+    </article>
+  </li>
+
+  <!-- BACHELORS -->
+    <li class="tl-item reveal">
+      <div class="tl-dot"></div>
+    <article class="edu-card reveal">
+      <header class="edu-head">
+        <h3>Bachelors in Accounting and Finance - <i> GPA: 3.8/4.0</i></h3>
+        <span class="edu-meta"><b>May 2023</b></span>
+      </header>
+      <span class="edu-notes">Delhi University - Delhi, India</span>
+      <br/>
+      <ul class="chip-list">
+        <i>Coursework:</i> <li>Cost Accounting</li>•<li>Financial Accounting</li>•<li>Managerial Accounting</li>•<li>Income Tax</li>•<li>Business Laws</li>
+      </ul>
+    </article>
+    </li>
+</section>
+</ol>
+
+<!-------------------------------------------------------------- Contact ----------------------------------------------------------------------------------->
+  
+
+  <!-- CONTACT -->
+<section class="contact2 section container" id="contact">
+  <div class="section__head">
+    <h2 class="section__title">Let’s Collaborate</h2>
+  </div>
+
+    <!-- Right: 2/3 -->
+    <aside class="contact2-right">
+      <div class="contact2-card">
+        <ul class="contact2-socials">
+          <!-- Email -->
+          <li class="social-item">
+            <span class="c2-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="3" y="5" width="18" height="14" fill="none" stroke="currentColor" stroke-width="2"/>
+                <path d="M3 6l9 7 9-7" fill="none" stroke="currentColor" stroke-width="2"/>
+              </svg>
+            </span>
+            <div class="c2-details">
+              <span class="c2-label">Email</span>
+              <a href=""mailto:riyamarwaha92@gmail.com">riyamarwaha92@gmail.com</a>
+            </div>
+          </li>
+
+          <!-- GitHub -->
+          <li class="social-item">
+            <span class="c2-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 .5A11.5 11.5 0 0 0 0 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.3.8-.6 0-.3 0-1 0-2-3.2.7-3.9-1.5-3.9-1.5-.5-1.4-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.2 1.2a11.2 11.2 0 0 1 5.8 0c2.2-1.5 3.2-1.2 3.2-1.2.6 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.3.8 1.1.8 2.2 0 1.6 0 2.8 0 3.2 0 .3.2.7.8.6A11.5 11.5 0 0 0 24 12 11.5 11.5 0 0 0 12 .5z"
+                      fill="currentColor"/>
+              </svg>
+            </span>
+            <div class="c2-details">
+              <span class="c2-label">GitHub</span>
+              <a href="https://github.com/RiyaMarwaha09" target="_blank" rel="noopener">github.com/RiyaMarwaha09</a>
+            </div>
+          </li>
+
+          <!-- LinkedIn -->
+          <li class="social-item">
+            <span class="c2-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M4 3h16a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1zm4 7H6v8h2v-8zm-1-1.8a1.2 1.2 0 1 1 0-2.4 1.2 1.2 0 0 1 0 2.4zM20 13.5c0-2.7-1.4-3.9-3.2-3.9-1.5 0-2.2.8-2.6 1.4v-1.2H12v8h2.2v-4.5c0-1.2.2-2.3 1.7-2.3 1.5 0 1.5 1.4 1.5 2.4V19H20v-5.5z"
+                      fill="currentColor"/>
+              </svg>
+            </span>
+            <div class="c2-details">
+              <span class="c2-label">LinkedIn</span>
+              <a href="https://www.linkedin.com/in/riya-marwaha/" target="_blank" rel="noopener">linkedin.com/in/riya-marwaha</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+</section>
+
+
+
+  <button class="to-top" aria-label="Back to top" title="Back to top">↑</button>
+
+  <footer class="site-footer">
+  <div class="container footer__wrap">
+    <!-- Use the SAME brand class your navbar uses.
+         If your nav brand is .site-brand or .nav__brand, keep it here too. -->
+    <div class="footer__brand nav__brand">Riya Marwaha</div>
+
+    <div class="footer__copy">© 2025 Riya Marwaha. All rights reserved.</div>
+  </div>
+</footer>
+
+
+  <!-- Scripts -->
+  <link rel="stylesheet" href="https://unpkg.com/vis-network/styles/vis-network.min.css">
+  <script defer src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+  
+  <script defer src="main.js"></script>
+</body>
+</html>
