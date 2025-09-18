@@ -283,3 +283,16 @@ img{ max-width:100%; height:auto; display:block }
   .section__title{ overflow-wrap:anywhere; word-break:break-word; hyphens:auto }
   footer{ margin-top:1.25rem }
 }
+
+/* === Force Experience & Education sections to stack vertically === */
+#experience,
+#education {
+  width: 100% !important;      /* take full width */
+  grid-column: 1 / -1 !important;  /* if inside grid, span all columns */
+}
+
+.row, .two-col, .columns {
+  display: block !important;   /* break the 2-column layout */
+  grid-template-columns: none !important;
+}
+
