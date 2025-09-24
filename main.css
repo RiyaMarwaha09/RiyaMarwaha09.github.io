@@ -103,7 +103,7 @@ img{ max-width:100%; height:auto; display:block }
 #about .section__title{ font-family:Georgia, 'Times New Roman', Times, serif; font-size:clamp(2rem, 4.5vw, 4rem); text-transform:capitalize }
 .about__grid{ display:grid; align-items:center; grid-template-columns: 2fr 4fr; gap:2rem }
 .about__copy p{ margin:.5rem 0 1rem; color:#514f4c; font-size:clamp(.96rem, 1.2vw, 1rem); text-align:justify; font-style:normal }
-.about__img{ width:100%; max-width:400px; aspect-ratio:1/1; object-fit:cover; border-radius:16px; box-shadow:var(--shadow) }
+.about__img{ width:100%; max-width:300px; aspect-ratio:1/1; object-fit:cover; border-radius:16px; box-shadow:var(--shadow) }
 
 /* ======================================================= PROJECTS ======================================================= */
 #projects .section__title{ font-family:Georgia, 'Times New Roman', Times, serif; font-size:clamp(2rem, 4vw, 3.5rem) }
