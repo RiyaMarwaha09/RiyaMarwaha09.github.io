@@ -177,9 +177,8 @@ img{ max-width:100%; height:auto; display:block }
 #contact .section__title{ font-family:Georgia, 'Times New Roman', Times, serif; font-size:clamp(2rem, 4vw, 3.5rem) }
 .contact2-grid{ display:grid; grid-template-columns: 1fr 2fr; gap:clamp(1rem, 2vw, 2.25rem); align-items:start }
 .contact2-card{ background:#fff; border:1px solid #e8d6c7; border-radius:16px; box-shadow:var(--shadow); padding:1.25rem 1.5rem }
-.contact2-socials{ list-style:none; padding:0; margin:0; display:flex; align-items:center;
-  gap:24px;            
-  flex-wrap:nowrap;     
+.contact2-socials{ list-style:none; padding:0; margin:0; display:flex; align-items:center; gap:24px;            
+  flex-wrap: wrap;     
   justify-content:center; }
 .social-item{ display:flex; align-items:flex-start; gap:.75rem }
 .c2-icon{ width:42px; height:42px; flex:0 0 42px; display:grid; place-items:center; border-radius:50%; background:#fbf4ee; border:1px solid #e8d6c7; color:var(--brand-2); box-shadow:0 6px 16px rgba(46,58,54,.06) }
