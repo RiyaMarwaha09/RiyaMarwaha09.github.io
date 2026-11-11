@@ -1,7 +1,7 @@
 # 👋 Hi, I'm Riya Marwaha  
 
-- 💼 Financial Risk Analyst at Morgan Stanley
-- 🎓 MBA in Business Analytics, UMass Dartmouth (Charlton College of Business)- December 2025
+- 💼 **Financial Risk Analyst** at Morgan Stanley
+- 🎓 MBA in Business Analytics, UMass Dartmouth (Charlton College of Business) — December 2025
 - 📊 4+ years of experience across financial analysis, operational risk, regulatory compliance, and internal controls
 - 📊 Passionate about turning raw data into insights that drive smarter business decisions  
 - 🛠️ Skilled in **SQL, R, Python, Power BI, Tableau, Advanced Excel, Predictive Modeling, Power Pivot**  
@@ -9,7 +9,7 @@
 
 ---
 
-## ✨ About me  
+## ✨ About Me  
 
 - 🔎 I specialize in **financial analytics, operational risk management, business intelligence, and reporting automation**
 - 📈 My experience includes **portfolio variance analysis, KRI monitoring, RCSA, financial reconciliations, and risk dashboards**
@@ -28,5 +28,5 @@
 📬 Let’s connect!  
 • [LinkedIn](https://www.linkedin.com/in/riyamarwaha/) 
 • [Personal Email](mailto:riyamarwaha92@gmail.com) · [Professional Email](mailto:riya.m@myhotmail.net)
-• [Portfolio]:(https://riyamarwaha09.github.io)
+• [Portfolio](https://riyamarwaha09.github.io)
 
