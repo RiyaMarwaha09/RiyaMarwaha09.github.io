@@ -150,7 +150,6 @@ const nodes = new vis.DataSet([
   // Finance and risk categories
   { id: 'finance',  label: 'Financial Analysis',     group: 'financial', ...hub(BRAND) },
   { id: 'risk',     label: 'Risk & Controls',        group: 'financial', ...hub(BRAND) },
-  { id: 'business', label: 'Business Communication', group: 'financial', ...hub(BRAND) },
 
   // Tools
   { id: 'sql',      label: 'SQL',            group: 'tech', ...hub(BRAND) },
@@ -197,6 +196,7 @@ const nodes = new vis.DataSet([
   { id: 'stakeholders', label: 'Stakeholder Communication', group: 'non', ...hub(BRAND) },
   { id: 'storytelling', label: 'Data Storytelling', group: 'non', ...hub(BRAND) },
   { id: 'management', label: 'Management Reporting', group: 'non', ...hub(BRAND) },
+  { id: 'business', label: 'Business Communication', group: 'financial', ...hub(BRAND) },
   
   // non-technical groups (methods / domain)
   { id: 'ntg_course',   label: 'Coursework & Methods', group: 'non', ...hub(BRAND) },
@@ -223,12 +223,14 @@ const connections = [
   ['technical', 'tg_bi'],
   ['technical', 'tg_ml'],
 
-  // Finance and risk categories
+  // Financial categories
   ['financial', 'finance'],
   ['financial', 'risk'],
 
-  // Non-technical category
+  // Non-technical categories
   ['nontech', 'business'],
+  ['nontech', 'ntg_course'],
+  ['nontech', 'ntg_comm'],
 
   // Tools
   ['tg_tools', 'sql'],
@@ -243,12 +245,10 @@ const connections = [
   ['tg_bi', 'dashboards'],
   ['tg_bi', 'automation'],
   ['tg_bi', 'validation'],
+  ['tg_bi', 'intelligence'],
 
-  // Analytical methods
+  // Predictive modeling
   ['tg_ml', 'predictive'],
-  ['tg_ml', 'dcf'],
-  ['tg_ml', 'scenario'],
-  ['tg_ml', 'factors'],
 
   // Financial analysis
   ['finance', 'variance'],
@@ -256,6 +256,9 @@ const connections = [
   ['finance', 'statements'],
   ['finance', 'reconciliation'],
   ['finance', 'portfolio'],
+  ['finance', 'dcf'],
+  ['finance', 'factors'],
+  ['finance', 'trend_variance_analysis'],
 
   // Risk and controls
   ['risk', 'operational'],
@@ -264,38 +267,23 @@ const connections = [
   ['risk', 'controls'],
   ['risk', 'compliance'],
   ['risk', 'register'],
+  ['risk', 'scenario'],
+  ['risk', 'enterprise_risk_management'],
+  ['risk', 'reporting_compliance'],
+  ['risk', 'risk_analysis_mitigation'],
 
   // Business communication
   ['business', 'stakeholders'],
   ['business', 'storytelling'],
   ['business', 'management'],
 
-  // Additional methods and non-technical categories
-  ['nontech', 'ntg_course'],
-  ['nontech', 'ntg_comm'],
-  ['nontech', 'ntg_fore'],
-  ['nontech', 'ntg_ana'],
-
-  ['ntg_course', 'c_bi'],
-  ['ntg_course', 'c_datamining'],
-  ['ntg_course', 'c_predict'],
-  ['ntg_course', 'c_erm'],
-  ['ntg_course', 'c_reporting'],
-  ['ntg_course', 'c_risk'],
-  ['ntg_course', 'e_ab'],
-
+  // Additional non-technical skills
   ['ntg_comm', 'c_story'],
   ['ntg_comm', 'a_stakeholder'],
   ['ntg_comm', 'a_leadership'],
-
-  ['ntg_fore', 'a_trend'],
-
-  ['ntg_ana', 'e_kpi'],
-  ['ntg_ana', 'a_trend'],
-  ['ntg_ana', 'a_validation'],
-  ['ntg_ana', 'a_strategy'],
-  ['ntg_ana', 'a_automation'],
-  ['ntg_ana', 'a_project']
+  ['ntg_course', 'a_validation'],
+  ['ntg_course', 'a_strategy'],
+  ['ntg_course', 'a_project']
 ];
 
 const edges = new vis.DataSet(
