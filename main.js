@@ -196,7 +196,7 @@ const nodes = new vis.DataSet([
   { id: 'stakeholders', label: 'Stakeholder Communication', group: 'non', ...hub(BRAND) },
   { id: 'storytelling', label: 'Data Storytelling', group: 'non', ...hub(BRAND) },
   { id: 'management', label: 'Management Reporting', group: 'non', ...hub(BRAND) },
-  { id: 'business', label: 'Business Communication', group: 'financial', ...hub(BRAND) },
+  { id: 'business', label: 'Business Communication', group: 'non', ...hub(BRAND) },
   
   // non-technical groups (methods / domain)
   { id: 'ntg_course',   label: 'Coursework & Methods', group: 'non', ...hub(BRAND) },
