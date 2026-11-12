@@ -138,8 +138,9 @@ const nodes = new vis.DataSet([
   { id: 'skills', label: 'Skills', group: 'core', ...core },
 
   // hubs
+  { id: 'financial', label: 'Financial Skills', group: 'financial', ...hub(BRAND) },
   { id: 'technical', label: 'Technical', group: 'tech', ...hub(ACCENT) },
-  { id: 'nontech',   label: 'Finance & Risk', group: 'non', ...hub(BRAND) },
+  { id: 'nontech', label: 'Non-Technical', group: 'non', ...hub('#CFE1D7') },
 
   // technical groups
   { id: 'tg_tools',  label: 'Tools & Programming',    group: 'tech', ...hub(ACCENT) },
