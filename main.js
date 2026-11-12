@@ -314,17 +314,21 @@ const edges = new vis.DataSet(
       highlight: { background: '#FFF59D', border: '#F57F17' } };
     const TINT_NON  = { background: '#FFCDD2', border: '#E57373',
       highlight: { background: '#FFCDD2', border: '#D32F2F' } };
+    const TINT_FINANCIAL = { background: '#C8E6C9', border: '#66BB6A',
+      highlight: { background: '#C8E6C9', border: '#388E3C' } };
 
     function setMode(mode) {
-      const hideTech = (mode === 'nontech');
-      const hideNon  = (mode === 'technical');
-
+      const hideTech = (mode === 'nontech' || mode === 'financial');
+      const hideNon  = (mode === 'technical' || mode === 'financial');
+      const hideFinancial = (mode === 'technical' || mode === 'nontech');
+      
       // visibility
       nodes.forEach(n => {
         const isCore = n.group === 'core';
         const isTech = n.group === 'tech';
         const isNon  = n.group === 'non';
-        const hidden = (hideTech && isTech) || (hideNon && isNon);
+        const isFinancial = n.group === 'financial';
+        const hidden = (hideTech && isTech) || (hideNon && isNon) || (hideFinancial && isFinancial);
         nodes.update({ id: n.id, hidden: isCore ? false : hidden });
       });
       edges.forEach(e => {
@@ -337,11 +341,13 @@ const edges = new vis.DataSet(
         nodes.forEach(n => nodes.update({ id: n.id, color: (n.group === 'tech') ? TINT_TECH : BASE_COLORS.get(n.id) }));
       } else if (mode === 'nontech') {
         nodes.forEach(n => nodes.update({ id: n.id, color: (n.group === 'non') ? TINT_NON : BASE_COLORS.get(n.id) }));
+      } else if (mode === 'financial') {
+        nodes.forEach(n => nodes.update({ id: n.id, color: (n.group === 'financial') ? TINT_FINANCIAL : BASE_COLORS.get(n.id)  }));
       } else { // 'all' or 'fit'
         nodes.forEach(n => nodes.update({ id: n.id, hidden: false, color: BASE_COLORS.get(n.id) }));
         edges.forEach(e => edges.update({ id: e.id, hidden: false }));
       }
-
+      
       // UI + camera
       const tb = document.querySelector('.graph-actions');
       const active = (mode === 'fit') ? 'all' : mode;
