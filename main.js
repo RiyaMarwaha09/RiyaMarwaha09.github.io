@@ -189,7 +189,7 @@ const nodes = new vis.DataSet([
   // Business communication
   { id: 'stakeholders', label: 'Stakeholder Communication', group: 'non', ...hub(BRAND) },
   { id: 'storytelling', label: 'Data Storytelling', group: 'non', ...hub(BRAND) },
-  { id: 'management', label: 'Management Reporting', group: 'non', ...hub(BRAND) }
+  { id: 'management', label: 'Management Reporting', group: 'non', ...hub(BRAND) },
   
   // non-technical groups (methods / domain)
   { id: 'ntg_course',   label: 'Coursework & Methods', group: 'non', ...hub(BRAND) },
@@ -217,54 +217,96 @@ const nodes = new vis.DataSet([
 ]);
 
 // ---- Edges ----
-const E = (a, b, id) => ({ id, from: a, to: b });
-const edges = new vis.DataSet([
-  // hubs
-  E('skills', 'technical', 'e1'), E('skills', 'nontech', 'e2'),
+const connections = [
+  // Main hubs
+  ['skills', 'technical'],
+  ['skills', 'nontech'],
 
-  // technical groups
-  E('technical', 'tg_bi', 'e3'), E('technical', 'tg_prog', 'e4'),
-  E('technical', 'tg_ml', 'e5'), E('technical', 'tg_graph', 'e6'),
-  E('technical', 'tg_geo', 'e7'), E('technical', 'tg_ops', 'e8'),
+  // Technical categories
+  ['technical', 'tg_tools'],
+  ['technical', 'tg_bi'],
+  ['technical', 'tg_ml'],
 
-  // non-technical groups
-  E('nontech', 'ntg_course', 'e9'), E('nontech', 'ntg_health', 'e10'),
-  E('nontech', 'ntg_exp', 'e11'), E('nontech', 'ntg_comm', 'e12'),
-  E('nontech', 'ntg_fore', 'e13'), E('nontech', 'ntg_ana', 'e14'),
+  // Finance and risk categories
+  ['nontech', 'finance'],
+  ['nontech', 'risk'],
+  ['nontech', 'business'],
 
-  // technical leaves
-  E('tg_bi', 't_powerbi', 'e15'), E('tg_bi', 't_tableau', 'e16'), E('tg_bi', 't_excel', 'e17'),
-  E('tg_prog', 't_sql', 'e18'), E('tg_prog', 't_postgres', 'e19'), E('tg_prog', 't_python', 'e20'), E('tg_prog', 't_r', 'e21'),
-  E('tg_ml', 'c_predict', 'e22'), // Predictive analytics as tool for modeling
-  E('tg_ml', 'e_ab', 'e23'),
-  E('tg_ml', 'f_sarima', 'e24'),
-  E('tg_ml', 'c_datamining', 'e25'),
-  E('tg_ops', 't_git', 'e26'), E('tg_ops', 't_airflow', 'e27'), E('tg_ops', 't_dbt', 'e28'),
-  E('tg_ops', 't_api', 'e29'),
-  E('tg_graph', 't_pyvis', 'e30'), E('tg_graph', 't_networkx', 'e31'),
-  E('tg_geo', 't_arcgis', 'e32'),
-  E('tg_prog', 't_fastapi', 'e33'),
+  // Tools
+  ['tg_tools', 'sql'],
+  ['tg_tools', 'python'],
+  ['tg_tools', 'r'],
+  ['tg_tools', 'excel'],
+  ['tg_tools', 'vba'],
 
-  // non-technical leaves
-  E('ntg_course', 'c_bi', 'e34'),
-  E('ntg_course', 'c_erm', 'e35'),
-  E('ntg_course', 'c_reporting', 'e36'),
-  E('ntg_course', 'c_risk', 'e37'),
-  E('ntg_exp', 'e_ab', 'e38'),
-  E('ntg_exp', 'e_kpi', 'e39'),
-  E('ntg_health', 'h_health', 'e40'),
-  E('ntg_health', 'h_geo', 'e41'),
-  E('ntg_fore', 'f_sarima', 'e42'),
-  E('ntg_comm', 'c_story', 'e43'),
-  E('ntg_ana', 'a_trend', 'e44'),
-  E('ntg_ana', 'a_validation', 'e45'),
-  E('ntg_ana', 'a_stakeholder', 'e46'),
-  E('ntg_ana', 'a_strategy', 'e47'),
-  E('ntg_ana', 'a_automation', 'e48'),
-  E('ntg_ana', 'a_leadership', 'e49'),
-  E('ntg_ana', 'a_project', 'e50')
-]);
+  // BI and automation
+  ['tg_bi', 'powerbi'],
+  ['tg_bi', 'tableau'],
+  ['tg_bi', 'dashboards'],
+  ['tg_bi', 'automation'],
+  ['tg_bi', 'validation'],
 
+  // Analytical methods
+  ['tg_ml', 'predictive'],
+  ['tg_ml', 'dcf'],
+  ['tg_ml', 'scenario'],
+  ['tg_ml', 'factors'],
+
+  // Financial analysis
+  ['finance', 'variance'],
+  ['finance', 'forecasting'],
+  ['finance', 'statements'],
+  ['finance', 'reconciliation'],
+  ['finance', 'portfolio'],
+
+  // Risk and controls
+  ['risk', 'operational'],
+  ['risk', 'kri'],
+  ['risk', 'rcsa'],
+  ['risk', 'controls'],
+  ['risk', 'compliance'],
+  ['risk', 'register'],
+
+  // Business communication
+  ['business', 'stakeholders'],
+  ['business', 'storytelling'],
+  ['business', 'management'],
+
+  // Additional methods and non-technical categories
+  ['nontech', 'ntg_course'],
+  ['nontech', 'ntg_comm'],
+  ['nontech', 'ntg_fore'],
+  ['nontech', 'ntg_ana'],
+
+  ['ntg_course', 'c_bi'],
+  ['ntg_course', 'c_datamining'],
+  ['ntg_course', 'c_predict'],
+  ['ntg_course', 'c_erm'],
+  ['ntg_course', 'c_reporting'],
+  ['ntg_course', 'c_risk'],
+  ['ntg_course', 'e_ab'],
+
+  ['ntg_comm', 'c_story'],
+  ['ntg_comm', 'a_stakeholder'],
+  ['ntg_comm', 'a_leadership'],
+
+  ['ntg_fore', 'forecasting'],
+
+  ['ntg_ana', 'e_kpi'],
+  ['ntg_ana', 'a_trend'],
+  ['ntg_ana', 'a_validation'],
+  ['ntg_ana', 'a_strategy'],
+  ['ntg_ana', 'a_automation'],
+  ['ntg_ana', 'a_project']
+];
+
+const edges = new vis.DataSet(
+  connections.map(([from, to], index) => ({
+    id: `edge_${index}`,
+    from,
+    to
+  }))
+);
 
     // ---- Network ----
     const net = new vis.Network(canvas, { nodes, edges }, {
