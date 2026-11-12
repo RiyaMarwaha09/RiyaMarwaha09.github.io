@@ -148,9 +148,9 @@ const nodes = new vis.DataSet([
   { id: 'tg_ml',    label: 'Analytical Methods',     group: 'tech', ...hub(ACCENT) },
 
   // Finance and risk categories
-  { id: 'finance',  label: 'Financial Analysis',     group: 'non', ...hub(BRAND) },
-  { id: 'risk',     label: 'Risk & Controls',        group: 'non', ...hub(BRAND) },
-  { id: 'business', label: 'Business Communication', group: 'non', ...hub(BRAND) },
+  { id: 'finance',  label: 'Financial Analysis',     group: 'financial', ...hub(BRAND) },
+  { id: 'risk',     label: 'Risk & Controls',        group: 'financial', ...hub(BRAND) },
+  { id: 'business', label: 'Business Communication', group: 'financial', ...hub(BRAND) },
 
   // Tools
   { id: 'sql',      label: 'SQL',            group: 'tech', ...hub(BRAND) },
@@ -165,12 +165,13 @@ const nodes = new vis.DataSet([
   { id: 'dashboards', label: 'Dashboard Development', group: 'tech', ...hub(BRAND) },
   { id: 'automation', label: 'Reporting Automation',  group: 'tech', ...hub(BRAND) },
   { id: 'validation', label: 'Data Validation',       group: 'tech', ...hub(BRAND) },
+  { id: 'intelligence', label: 'Business Intelligence', group: 'tech', ...hub(BRAND) },
 
   // Analytical methods
   { id: 'predictive',  label: 'Predictive Modeling',             group: 'tech', ...hub(BRAND) },
-  { id: 'dcf',         label: 'DCF Valuation',                   group: 'tech', ...hub(BRAND) },
-  { id: 'scenario',    label: 'Scenario & Sensitivity Analysis', group: 'tech', ...hub(BRAND) },
-  { id: 'factors',     label: 'CAPM & Fama-French Models',       group: 'tech', ...hub(BRAND) },
+  { id: 'dcf',         label: 'DCF Valuation',                   group: 'financial', ...hub(BRAND) },
+  { id: 'scenario',    label: 'Scenario & Sensitivity Analysis', group: 'financial', ...hub(BRAND) },
+  { id: 'factors',     label: 'CAPM & Fama-French Models',       group: 'financial', ...hub(BRAND) },
 
   // Financial analysis
   { id: 'variance', label: 'Variance Analysis', group: 'financial', ...hub(BRAND) },
@@ -178,6 +179,11 @@ const nodes = new vis.DataSet([
   { id: 'statements', label: 'Financial Statement Analysis', group: 'financial', ...hub(BRAND) },
   { id: 'reconciliation', label: 'Account Reconciliation', group: 'financial', ...hub(BRAND) },
   { id: 'portfolio', label: 'Portfolio Risk & Performance', group: 'financial', ...hub(BRAND) },
+  { id: 'enterprise_risk_management', label: 'Enterprise Risk Management', group: 'financial', ...hub(BRAND)},
+  { id: 'reporting_compliance', label: 'Reporting & Compliance', group: 'financial', ...hub(BRAND)},
+  { id: 'risk_analysis_mitigation', label: 'Risk Analysis & Mitigation', group: 'financial', ...hub(BRAND) },
+  { id: 'trend_variance_analysis', label: 'Trend & Variance Analysis', group: 'financial', ...hub(BRAND)},
+
 
   // Risk and controls
   { id: 'operational', label: 'Operational Risk Management', group: 'financial', ...hub(BRAND) },
@@ -195,24 +201,12 @@ const nodes = new vis.DataSet([
   // non-technical groups (methods / domain)
   { id: 'ntg_course',   label: 'Coursework & Methods', group: 'non', ...hub(BRAND) },
   { id: 'ntg_comm',     label: 'Communication',        group: 'non', ...hub(BRAND) },
-  { id: 'ntg_fore',     label: 'Forecasting',          group: 'non', ...hub(BRAND) },
-  { id: 'ntg_ana',      label: 'Analytics & Strategy', group: 'non', ...hub(BRAND) },
 
   // non-technical leaves (methods / domain / soft skills)
-  { id: 'c_bi',         label: 'Business Intelligence',          group: 'non', ...leaf() },
-  { id: 'c_datamining', label: 'Data Mining',                   group: 'non', ...leaf() },
-  { id: 'c_predict',    label: 'Predictive Analytics',           group: 'non', ...leaf() },
-  { id: 'c_erm',        label: 'Enterprise Risk Mgmt',           group: 'non', ...leaf() },
-  { id: 'c_reporting',  label: 'Reporting & Compliance',         group: 'non', ...leaf() },
-  { id: 'c_risk',       label: 'Risk Analysis & Mitigation',     group: 'non', ...leaf() },
-  { id: 'e_ab',         label: 'A/B Testing',                    group: 'non', ...leaf() },
-  { id: 'e_kpi',        label: 'KPI Design',                     group: 'non', ...leaf() },
   { id: 'c_story',      label: 'Data Storytelling',              group: 'non', ...leaf() },
-  { id: 'a_trend',      label: 'Trend & Variance Analysis',      group: 'non', ...leaf() },
   { id: 'a_validation', label: 'Data Validation',                group: 'non', ...leaf() },
   { id: 'a_stakeholder',label: 'Stakeholder Communication',      group: 'non', ...leaf() },
   { id: 'a_strategy',   label: 'Strategic Planning',             group: 'non', ...leaf() },
-  { id: 'a_automation', label: 'Process Automation',             group: 'non', ...leaf() },
   { id: 'a_leadership', label: 'Team Leadership',                group: 'non', ...leaf() },
   { id: 'a_project',    label: 'Project Management',             group: 'non', ...leaf() }
 ]);
