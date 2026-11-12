@@ -172,19 +172,19 @@ const nodes = new vis.DataSet([
   { id: 'factors',     label: 'CAPM & Fama-French Models',       group: 'tech', ...hub(BRAND) },
 
   // Financial analysis
-  { id: 'variance', label: 'Variance Analysis', group: 'non', ...hub(BRAND) },
-  { id: 'forecasting', label: 'Budgeting & Forecasting', group: 'non', ...hub(BRAND) },
-  { id: 'statements', label: 'Financial Statement Analysis', group: 'non', ...hub(BRAND) },
-  { id: 'reconciliation', label: 'Account Reconciliation', group: 'non', ...hub(BRAND) },
-  { id: 'portfolio', label: 'Portfolio Risk & Performance', group: 'non', ...hub(BRAND) },
+  { id: 'variance', label: 'Variance Analysis', group: 'financial', ...hub(BRAND) },
+  { id: 'forecasting', label: 'Budgeting & Forecasting', group: 'financial', ...hub(BRAND) },
+  { id: 'statements', label: 'Financial Statement Analysis', group: 'financial', ...hub(BRAND) },
+  { id: 'reconciliation', label: 'Account Reconciliation', group: 'financial', ...hub(BRAND) },
+  { id: 'portfolio', label: 'Portfolio Risk & Performance', group: 'financial', ...hub(BRAND) },
 
   // Risk and controls
-  { id: 'operational', label: 'Operational Risk Management', group: 'non', ...hub(BRAND) },
-  { id: 'kri', label: 'KRI Monitoring', group: 'non', ...hub(BRAND) },
-  { id: 'rcsa', label: 'RCSA', group: 'non', ...hub(BRAND) },
-  { id: 'controls', label: 'Internal Controls Testing', group: 'non', ...hub(BRAND) },
-  { id: 'compliance', label: 'Regulatory Compliance', group: 'non', ...hub(BRAND) },
-  { id: 'register', label: 'Risk Register Management', group: 'non', ...hub(BRAND) },
+  { id: 'operational', label: 'Operational Risk Management', group: 'financial', ...hub(BRAND) },
+  { id: 'kri', label: 'KRI Monitoring', group: 'financial', ...hub(BRAND) },
+  { id: 'rcsa', label: 'RCSA', group: 'financial', ...hub(BRAND) },
+  { id: 'controls', label: 'Internal Controls Testing', group: 'financial', ...hub(BRAND) },
+  { id: 'compliance', label: 'Regulatory Compliance', group: 'financial', ...hub(BRAND) },
+  { id: 'register', label: 'Risk Register Management', group: 'financial', ...hub(BRAND) },
 
   // Business communication
   { id: 'stakeholders', label: 'Stakeholder Communication', group: 'non', ...hub(BRAND) },
@@ -219,6 +219,7 @@ const nodes = new vis.DataSet([
 // ---- Edges ----
 const connections = [
   // Main hubs
+  ['skills', 'financial'],
   ['skills', 'technical'],
   ['skills', 'nontech'],
 
@@ -228,8 +229,10 @@ const connections = [
   ['technical', 'tg_ml'],
 
   // Finance and risk categories
-  ['nontech', 'finance'],
-  ['nontech', 'risk'],
+  ['financial', 'finance'],
+  ['financial', 'risk'],
+
+  // Non-technical category
   ['nontech', 'business'],
 
   // Tools
@@ -290,7 +293,7 @@ const connections = [
   ['ntg_comm', 'a_stakeholder'],
   ['ntg_comm', 'a_leadership'],
 
-  ['ntg_fore', 'forecasting'],
+  ['ntg_fore', 'a_trend'],
 
   ['ntg_ana', 'e_kpi'],
   ['ntg_ana', 'a_trend'],
