@@ -139,42 +139,63 @@ const nodes = new vis.DataSet([
 
   // hubs
   { id: 'technical', label: 'Technical', group: 'tech', ...hub(ACCENT) },
-  { id: 'nontech',   label: 'Non-Technical', group: 'non', ...hub(BRAND) },
+  { id: 'nontech',   label: 'Finance & Risk', group: 'non', ...hub(BRAND) },
 
   // technical groups
-  { id: 'tg_bi',    label: 'BI & Visualization',    group: 'tech', ...hub(ACCENT) },
-  { id: 'tg_prog',  label: 'Programming & Data',    group: 'tech', ...hub(ACCENT) },
-  { id: 'tg_ml',    label: 'ML & Modeling',         group: 'tech', ...hub(ACCENT) },
-  { id: 'tg_graph', label: 'Network & Graph',       group: 'tech', ...hub(ACCENT) },
-  { id: 'tg_geo',   label: 'Geo & Mapping',         group: 'tech', ...hub(ACCENT) },
-  { id: 'tg_ops',   label: 'DataOps & Automation',  group: 'tech', ...hub(ACCENT) },
+  { id: 'tg_tools',  label: 'Tools & Programming',    group: 'tech', ...hub(ACCENT) },
+  { id: 'tg_bi',    label: 'BI & Automation',    group: 'tech', ...hub(ACCENT) },
+  { id: 'tg_ml',    label: 'Analytical Methods',     group: 'tech', ...hub(ACCENT) },
 
+  // Finance and risk categories
+  { id: 'finance',  label: 'Financial Analysis',     group: 'non', ...hub(BRAND) },
+  { id: 'risk',     label: 'Risk & Controls',        group: 'non', ...hub(BRAND) },
+  { id: 'business', label: 'Business Communication', group: 'non', ...hub(BRAND) },
+
+  // Tools
+  { id: 'sql',      label: 'SQL',            group: 'tech', ...hub(BRAND) },
+  { id: 'python',   label: 'Python',         group: 'tech', ...hub(BRAND) },
+  { id: 'r',        label: 'R',              group: 'tech', ...hub(BRAND) },
+  { id: 'excel',    label: 'Advanced Excel', group: 'tech', ...hub(BRAND) },
+  { id: 'vba',      label: 'VBA',            group: 'tech', ...hub(BRAND) },
+
+  // BI and automation
+  { id: 'powerbi',    label: 'Power BI',              group: 'tech', ...hub(BRAND) },
+  { id: 'tableau',    label: 'Tableau',               group: 'tech', ...hub(BRAND) },
+  { id: 'dashboards', label: 'Dashboard Development', group: 'tech', ...hub(BRAND) },
+  { id: 'automation', label: 'Reporting Automation',  group: 'tech', ...hub(BRAND) },
+  { id: 'validation', label: 'Data Validation',       group: 'tech', ...hub(BRAND) },
+
+  // Analytical methods
+  { id: 'predictive',  label: 'Predictive Modeling',             group: 'tech', ...hub(BRAND) },
+  { id: 'dcf',         label: 'DCF Valuation',                   group: 'tech', ...hub(BRAND) },
+  { id: 'scenario',    label: 'Scenario & Sensitivity Analysis', group: 'tech', ...hub(BRAND) },
+  { id: 'factors',     label: 'CAPM & Fama-French Models',       group: 'tech', ...hub(BRAND) },
+
+  // Financial analysis
+  { id: 'variance', label: 'Variance Analysis', group: 'non', ...hub(BRAND) },
+  { id: 'forecasting', label: 'Budgeting & Forecasting', group: 'non', ...hub(BRAND) },
+  { id: 'statements', label: 'Financial Statement Analysis', group: 'non', ...hub(BRAND) },
+  { id: 'reconciliation', label: 'Account Reconciliation', group: 'non', ...hub(BRAND) },
+  { id: 'portfolio', label: 'Portfolio Risk & Performance', group: 'non', ...hub(BRAND) },
+
+  // Risk and controls
+  { id: 'operational', label: 'Operational Risk Management', group: 'non', ...hub(BRAND) },
+  { id: 'kri', label: 'KRI Monitoring', group: 'non', ...hub(BRAND) },
+  { id: 'rcsa', label: 'RCSA', group: 'non', ...hub(BRAND) },
+  { id: 'controls', label: 'Internal Controls Testing', group: 'non', ...hub(BRAND) },
+  { id: 'compliance', label: 'Regulatory Compliance', group: 'non', ...hub(BRAND) },
+  { id: 'register', label: 'Risk Register Management', group: 'non', ...hub(BRAND) },
+
+  // Business communication
+  { id: 'stakeholders', label: 'Stakeholder Communication', group: 'non', ...hub(BRAND) },
+  { id: 'storytelling', label: 'Data Storytelling', group: 'non', ...hub(BRAND) },
+  { id: 'management', label: 'Management Reporting', group: 'non', ...hub(BRAND) }
+  
   // non-technical groups (methods / domain)
   { id: 'ntg_course',   label: 'Coursework & Methods', group: 'non', ...hub(BRAND) },
-  { id: 'ntg_health',   label: 'Healthcare Domain',    group: 'non', ...hub(BRAND) },
-  { id: 'ntg_exp',      label: 'Experimentation',      group: 'non', ...hub(BRAND) },
   { id: 'ntg_comm',     label: 'Communication',        group: 'non', ...hub(BRAND) },
   { id: 'ntg_fore',     label: 'Forecasting',          group: 'non', ...hub(BRAND) },
   { id: 'ntg_ana',      label: 'Analytics & Strategy', group: 'non', ...hub(BRAND) },
-
-  // technical leaves (tools / languages/skills from resume)
-  { id: 't_powerbi',    label: 'Power BI',                group: 'tech', ...leaf() },
-  { id: 't_tableau',    label: 'Tableau',                 group: 'tech', ...leaf() },
-  { id: 't_arcgis',     label: 'ArcGIS',                  group: 'tech', ...leaf() },
-  { id: 't_excel',      label: 'Excel (Power Query, DAX)',group: 'tech', ...leaf() },
-  { id: 't_sql',        label: 'SQL',                     group: 'tech', ...leaf() },
-  { id: 't_postgres',   label: 'PostgreSQL',              group: 'tech', ...leaf() },
-  { id: 't_python',     label: 'Python',                  group: 'tech', ...leaf() },
-  { id: 't_r',          label: 'R',                       group: 'tech', ...leaf() },
-  { id: 't_fastapi',    label: 'FastAPI',                 group: 'tech', ...leaf() },
-  { id: 't_git',        label: 'Git/GitHub',              group: 'tech', ...leaf() },
-  { id: 't_dbt',        label: 'dbt',                     group: 'tech', ...leaf() },
-  { id: 't_airflow',    label: 'Airflow',                 group: 'tech', ...leaf() },
-  { id: 't_api',        label: 'API Integration',          group: 'tech', ...leaf() },
-
-  // network & graph
-  { id: 't_pyvis',      label: 'PyVis',                   group: 'tech', ...leaf() },
-  { id: 't_networkx',   label: 'NetworkX',                group: 'tech', ...leaf() },
 
   // non-technical leaves (methods / domain / soft skills)
   { id: 'c_bi',         label: 'Business Intelligence',          group: 'non', ...leaf() },
@@ -183,11 +204,8 @@ const nodes = new vis.DataSet([
   { id: 'c_erm',        label: 'Enterprise Risk Mgmt',           group: 'non', ...leaf() },
   { id: 'c_reporting',  label: 'Reporting & Compliance',         group: 'non', ...leaf() },
   { id: 'c_risk',       label: 'Risk Analysis & Mitigation',     group: 'non', ...leaf() },
-  { id: 'h_health',     label: 'Healthcare/Pharma Analytics',    group: 'non', ...leaf() },
-  { id: 'h_geo',        label: 'Geospatial analysis',            group: 'non', ...leaf() },
   { id: 'e_ab',         label: 'A/B Testing',                    group: 'non', ...leaf() },
   { id: 'e_kpi',        label: 'KPI Design',                     group: 'non', ...leaf() },
-  { id: 'f_sarima',     label: 'Demand Forecasting (SARIMA)',    group: 'non', ...leaf() },
   { id: 'c_story',      label: 'Data Storytelling',              group: 'non', ...leaf() },
   { id: 'a_trend',      label: 'Trend & Variance Analysis',      group: 'non', ...leaf() },
   { id: 'a_validation', label: 'Data Validation',                group: 'non', ...leaf() },
